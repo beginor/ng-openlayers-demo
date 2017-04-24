@@ -12,7 +12,7 @@ export default {
     nodeResolve({
       jsnext: true,
       module: true,
-      externals: []
+      externals: ['ol']
     }),
     commonjs({
       include: 'node_modules/rxjs/**',

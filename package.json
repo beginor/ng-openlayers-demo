@@ -1,7 +1,7 @@
 {
-  "name": "angular-seed",
+  "name": "ng-openlayers-demo",
   "version": "1.0.0",
-  "description": "angular seed app",
+  "description": "angular openlayers demo app",
   "main": "index.html",
   "scripts": {
     "sass": "node-sass --recursive --source-map true --source-map-contents --output src src ",
@@ -20,15 +20,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beginor/angular-seed.git"
+    "url": "git+https://github.com/beginor/ng-openlayers-demo.git"
   },
-  "keywords": ["angular", "seed", "gulp", "systemjs"],
+  "keywords": ["angular", "openlayers", "gulp", "systemjs"],
   "author": "beginor",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/beginor/angular-seed/issues"
+    "url": "https://github.com/beginor/ng-openlayers-demo/issues"
   },
-  "homepage": "https://github.com/beginor/angular-seed#readme",
+  "homepage": "https://github.com/beginor/ng-openlayers-demo#readme",
   "dependencies": {
     "@angular/animations": "^4.0.3",
     "@angular/common": "^4.0.3",
@@ -46,7 +46,8 @@
     "zone.js": "^0.8.8",
     "bootstrap": "^4.0.0-alpha.6",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.24",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "openlayers": "^4.1.0"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^4.0.3",
@@ -62,6 +63,7 @@
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^1.0.2",
-    "typescript": "~2.2.2"
+    "typescript": "~2.2.2",
+    "@types/openlayers": "^4.0.1"
   }
 }
