@@ -8,11 +8,4 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-    message: string = 'Hello, Angular !';
-    count: number = 0;
-
-    onClick() {
-        this.message = `You have clicked ${++this.count} times!`;
-    }
-
 }
