@@ -30,7 +30,7 @@ gulp.task('serve', function () {
         livereload: true,
         // api proxy middleware
         middleware: function (conn, opts) {
-            var restProxy = proxy('/rest', {
+            var restProxy = proxy('/geoserver', {
                 target: 'http://127.0.0.1:8080',
                 // for vhosted sites, changes host header to match to target's host
                 changeOrigin: true,
