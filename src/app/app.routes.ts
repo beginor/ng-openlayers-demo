@@ -1,4 +1,4 @@
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Route } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { HelloMapComponent } from './components/hello-map/hello-map.component';
@@ -8,11 +8,17 @@ export const RouteComponents = [
     HelloMapComponent
 ];
 
+export const RouteList: RouteWithText[] = [
+    { path: '', redirectTo: '/home', pathMatch: 'full', text: '' },
+    { path: 'home', component: HomeComponent, text: '' },
+    { path: 'hello-map', component: HelloMapComponent, text: 'Hello, map' }
+];
+
 export const AppRoutes = RouterModule.forRoot(
-    [
-        { path: '', redirectTo: '/home', pathMatch: 'full' },
-        { path: 'home', component: HomeComponent },
-        { path: 'hello-map', component: HelloMapComponent }
-    ],
+    RouteList,
     { useHash: true, enableTracing: false }
 );
+
+interface RouteWithText extends Route {
+    text: string;
+}

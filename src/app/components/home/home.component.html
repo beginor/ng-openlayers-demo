@@ -1,8 +1,9 @@
 <div class="card" [@state]="state">
   <div class="card-header">Openlayers Demos</div>
   <div class="list-group list-group-flush">
-    <a class="list-group-item list-group-item-action" routerLink="/hello-map">
-      Hello Map
+    <a class="list-group-item list-group-item-action"
+      *ngFor="let r of routes" [routerLink]="'/' + r.path">
+      {{r.text}}
     </a>
   </div>
 </div>
