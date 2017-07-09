@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
     state: any;
     routes: any[]
 
+
     ngOnInit() {
         this.routes = RouteList.filter(r => !!r.text);
     }
