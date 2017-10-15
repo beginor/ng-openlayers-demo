@@ -1,3 +1,6 @@
+// tslint:disable-next-line:no-reference
+/// <reference path="../typings/olms.d.ts" />
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
