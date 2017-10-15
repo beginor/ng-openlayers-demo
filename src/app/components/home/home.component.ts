@@ -1,4 +1,4 @@
-import { animate, transition, trigger, state, style } from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 import { RouteList } from '../../app.routes'
