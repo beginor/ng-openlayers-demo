@@ -13,19 +13,19 @@
     "gd_county_simp": {
       "type": "vector",
       "tiles": ["http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/postgis:gd_county_simp@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
-      "minZoom": 11,
-      "maxZoom": 14
+      "minZoom": 10,
+      "maxZoom": 13
     },
     "gd_town_simp": {
       "type": "vector",
       "tiles": ["http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/postgis:gd_town_simp@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
-      "minZoom": 15,
-      "maxZoom": 17
+      "minZoom": 13,
+      "maxZoom": 16
     },
     "gd_village": {
       "type": "vector",
       "tiles": ["http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/postgis:gd_village@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
-      "minZoom": 18,
+      "minZoom": 16,
       "maxZoom": 20
     }
   },
@@ -33,53 +33,57 @@
     {
       "id": "gd_city_simp",
       "source": "gd_city_simp",
-      "layout": {
-        "visibility": "visible"
-      },
+      "source-layer": "gd_city_simp",
+      "minzoom": 6,
+      "maxzoom": 10,
       "type": "fill",
       "paint": {
         "fill-antialias": "true",
         "fill-color": "#756bb1",
-        "fill-outline-color":"#8b8b8b"
+        "fill-outline-color":"#8b8b8b",
+        "fill-opacity": 1.0
       }
     },
     {
       "id": "gd_county_simp",
       "source": "gd_county_simp",
-      "layout": {
-        "visibility": "visible"
-      },
+      "source-layer": "gd_county_simp",
+      "minzoom": 10,
+      "maxzoom": 13,
       "type": "fill",
       "paint": {
         "fill-antialias": "true",
         "fill-color": "#9e9ac8",
-        "fill-outline-color":"#8b8b8b"
+        "fill-outline-color":"#8b8b8b",
+        "fill-opacity": 1.0
       }
     },
     {
       "id": "gd_town_simp",
       "source": "gd_town_simp",
-      "layout": {
-        "visibility": "visible"
-      },
+      "source-layer": "gd_town_simp",
+      "minzoom": 13,
+      "maxzoom": 16,
       "type": "fill",
       "paint": {
         "fill-antialias": "true",
         "fill-color": "#cbc9e2",
-        "fill-outline-color":"#8b8b8b"
+        "fill-outline-color":"#8b8b8b",
+        "fill-opacity": 1.0
       }
     },
     {
       "id": "gd_village",
       "source": "gd_village",
-      "layout": {
-        "visibility": "visible"
-      },
+      "source-layer": "gd_village",
+      "minzoom": 16,
+      "maxzoom": 20,
       "type": "fill",
       "paint": {
         "fill-antialias": "true",
         "fill-color": "#f2f0f7",
-        "fill-outline-color":"#8b8b8b"
+        "fill-outline-color":"#8b8b8b",
+        "fill-opacity": 1.0
       }
     }
   ]
