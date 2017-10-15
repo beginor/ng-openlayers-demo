@@ -30,20 +30,20 @@ export class VectorTileComponent implements OnInit, AfterViewInit {
     map: ol.Map;
 
     state: any;
-    
+
     constructor() { }
 
     ngOnInit() { }
 
     ngAfterViewInit(): void {
-        var layer = 'postgis:gd_village';
+        var layer = 'postgis:gd_place_name';
         var epsg = '900913';
         this.map = new ol.Map({
             target: this.mapEl.nativeElement,
             layers: [
-                new ol.layer.Tile({
-                    source: new ol.source.OSM(),
-                }),
+                // new ol.layer.Tile({
+                //     source: new ol.source.OSM(),
+                // }),
                 new ol.layer.VectorTile({
                     style: (feature: ol.Feature) => {
                         return new ol.style.Style({
@@ -75,7 +75,7 @@ export class VectorTileComponent implements OnInit, AfterViewInit {
             ],
             view: new ol.View({
                 center: ol.proj.fromLonLat([113.351, 23.1856]),
-                zoom: 14
+                zoom: 7
             })
         });
     }

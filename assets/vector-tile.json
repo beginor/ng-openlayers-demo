@@ -1,0 +1,86 @@
+{
+  "version": 8,
+  "name": "Test Vector Tile",
+  "center": [113.351, 23.1856],
+  "zoom": 7,
+  "sources": {
+    "gd_city_simp": {
+      "type": "vector",
+      "tiles": ["http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/postgis:gd_city_simp@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
+      "minZoom": 6,
+      "maxZoom": 10
+    },
+    "gd_county_simp": {
+      "type": "vector",
+      "tiles": ["http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/postgis:gd_county_simp@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
+      "minZoom": 11,
+      "maxZoom": 14
+    },
+    "gd_town_simp": {
+      "type": "vector",
+      "tiles": ["http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/postgis:gd_town_simp@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
+      "minZoom": 15,
+      "maxZoom": 17
+    },
+    "gd_village": {
+      "type": "vector",
+      "tiles": ["http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/postgis:gd_village@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
+      "minZoom": 18,
+      "maxZoom": 20
+    }
+  },
+  "layers": [
+    {
+      "id": "gd_city_simp",
+      "source": "gd_city_simp",
+      "layout": {
+        "visibility": "visible"
+      },
+      "type": "fill",
+      "paint": {
+        "fill-antialias": "true",
+        "fill-color": "#756bb1",
+        "fill-outline-color":"#8b8b8b"
+      }
+    },
+    {
+      "id": "gd_county_simp",
+      "source": "gd_county_simp",
+      "layout": {
+        "visibility": "visible"
+      },
+      "type": "fill",
+      "paint": {
+        "fill-antialias": "true",
+        "fill-color": "#9e9ac8",
+        "fill-outline-color":"#8b8b8b"
+      }
+    },
+    {
+      "id": "gd_town_simp",
+      "source": "gd_town_simp",
+      "layout": {
+        "visibility": "visible"
+      },
+      "type": "fill",
+      "paint": {
+        "fill-antialias": "true",
+        "fill-color": "#cbc9e2",
+        "fill-outline-color":"#8b8b8b"
+      }
+    },
+    {
+      "id": "gd_village",
+      "source": "gd_village",
+      "layout": {
+        "visibility": "visible"
+      },
+      "type": "fill",
+      "paint": {
+        "fill-antialias": "true",
+        "fill-color": "#f2f0f7",
+        "fill-outline-color":"#8b8b8b"
+      }
+    }
+  ]
+}
