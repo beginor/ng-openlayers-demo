@@ -53,7 +53,8 @@
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.28",
     "font-awesome": "^4.7.0",
     "web-animations-js": "^2.3.1",
-    "openlayers": "^4.1.1"
+    "openlayers": "^4.4.2",
+    "ol-mapbox-style": "^2.6.6"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^4.3.1",
@@ -73,6 +74,6 @@
     "rollup-plugin-uglify": "^2.0.1",
     "typescript": "~2.3.4",
     "@types/web-animations-js": "^2.2.4",
-    "@types/openlayers": "^4.1.0"
+    "@types/openlayers": "^4.3.7"
   }
 }
