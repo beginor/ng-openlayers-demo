@@ -14,7 +14,7 @@ export default {
       format: 'iife'
     },
     sourceMap: false,
-    external: ['ol'],
+    external: ['ol', 'olms'],
     plugins: [
         css({ output: 'dist/build.css' }),
         alias({
