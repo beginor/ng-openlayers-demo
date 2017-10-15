@@ -1,5 +1,9 @@
-import { animate, transition, trigger, state, style } from '@angular/animations';
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import {
+    animate, state, style, transition, trigger
+} from '@angular/animations';
+import {
+    AfterViewInit, Component, ElementRef, OnInit, ViewChild
+} from '@angular/core';
 
 @Component({
     moduleId: module.id,
@@ -25,16 +29,20 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 })
 export class HelloMapComponent implements OnInit, AfterViewInit {
 
-    @ViewChild('map') mapEl: ElementRef;
-    map: ol.Map;
+    @ViewChild('map') public mapEl: ElementRef;
+    public state: any;
 
-    state: any;
+    private map: ol.Map;
 
-    constructor() { }
+    public constructor() {
+        //
+    }
 
-    ngOnInit() { }
+    public ngOnInit() {
+        //
+    }
 
-    ngAfterViewInit(): void {
+    public ngAfterViewInit(): void {
         this.map = new ol.Map({
             target: this.mapEl.nativeElement,
             layers: [

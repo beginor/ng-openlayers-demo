@@ -1,5 +1,9 @@
-import { animate, transition, trigger, state, style } from '@angular/animations';
-import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import {
+    animate, state, style, transition, trigger
+} from '@angular/animations';
+import {
+    AfterViewInit, Component, ElementRef, OnInit, ViewChild
+} from '@angular/core';
 
 @Component({
     moduleId: module.id,
@@ -26,18 +30,22 @@ import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angula
 
 export class VectorTileComponent implements OnInit, AfterViewInit {
 
-    @ViewChild('map') mapEl: ElementRef;
-    map: ol.Map;
+    @ViewChild('map') public mapEl: ElementRef;
+    public state: any;
 
-    state: any;
+    private map: ol.Map;
 
-    constructor() { }
+    constructor() {
+        //
+    }
 
-    ngOnInit() { }
+    public ngOnInit() {
+        //
+    }
 
-    ngAfterViewInit(): void {
-        var layer = 'postgis:gd_place_name';
-        var epsg = '900913';
+    public ngAfterViewInit(): void {
+        const layer = 'postgis:gd_place_name';
+        const epsg = '900913';
         this.map = new ol.Map({
             target: this.mapEl.nativeElement,
             layers: [
@@ -58,17 +66,17 @@ export class VectorTileComponent implements OnInit, AfterViewInit {
                             //     text: feature.get('name'),
                             //     textAlign: 'center'
                             // })
-                        })
+                        });
                     },
                     source: new ol.source.VectorTile({
-                        tilePixelRatio: 1, // oversampling when > 1
-                        projection: '',
+                        // tilePixelRatio: 1, // oversampling when > 1
+                        projection: 'EPSG:3857',
                         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
                         format: new ol.format.MVT({
-                            //featureClass: ol.Feature
+                            // featureClass: ol.Feature
                         }),
                         url: '/geoserver/gwc/service/tms/1.0.0/' + layer +
-                            '@EPSG:'+epsg+'@pbf/{z}/{x}/{-y}.pbf'
+                            '@EPSG:' + epsg + '@pbf/{z}/{x}/{-y}.pbf'
                     }),
                     renderOrder: (f1, f2) => 1
                 })

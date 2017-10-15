@@ -1,8 +1,10 @@
-import { RouterModule, Route } from '@angular/router';
+import { Route, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './components/home/home.component';
 import { HelloMapComponent } from './components/hello-map/hello-map.component';
-import { VectorTileComponent } from './components/vector-tile/vector-tile.component';
+import { HomeComponent } from './components/home/home.component';
+import {
+    VectorTileComponent
+} from './components/vector-tile/vector-tile.component';
 
 export const RouteComponents = [
     HomeComponent,

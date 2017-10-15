@@ -1,7 +1,9 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import {
+    animate, state, style, transition, trigger
+} from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
-import { RouteList } from '../../app.routes'
+import { RouteList } from '../../app.routes';
 
 @Component({
     moduleId: module.id,
@@ -27,11 +29,10 @@ import { RouteList } from '../../app.routes'
 })
 export class HomeComponent implements OnInit {
 
-    state: any;
-    routes: any[]
+    public state: any;
+    public routes: any[];
 
-
-    ngOnInit() {
+    public ngOnInit() {
         this.routes = RouteList.filter(r => !!r.text);
     }
 
