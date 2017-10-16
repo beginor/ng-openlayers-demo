@@ -87,6 +87,5 @@ export class VectorTileComponent implements OnInit, AfterViewInit {
             })
         });
         olms.apply(this.map, 'assets/vector-tile.json');
-        window.olmap = this.map;
     }
 }
