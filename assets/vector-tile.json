@@ -6,30 +6,53 @@
   "sources": {
     "gd_city_simp": {
       "type": "vector",
-      "tiles": ["http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/postgis:gd_city_simp@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
+      "tiles": ["/geoserver/gwc/service/tms/1.0.0/postgis:gd_city_simp@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
+      "minZoom": 6,
+      "maxZoom": 10
+    },
+    "gd_city_point": {
+      "type": "vector",
+      "tiles": ["/geoserver/gwc/service/tms/1.0.0/postgis:gd_city_point@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
       "minZoom": 6,
       "maxZoom": 10
     },
     "gd_county_simp": {
       "type": "vector",
-      "tiles": ["http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/postgis:gd_county_simp@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
+      "tiles": ["/geoserver/gwc/service/tms/1.0.0/postgis:gd_county_simp@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
       "minZoom": 10,
       "maxZoom": 13
     },
     "gd_town_simp": {
       "type": "vector",
-      "tiles": ["http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/postgis:gd_town_simp@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
+      "tiles": ["/geoserver/gwc/service/tms/1.0.0/postgis:gd_town_simp@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
       "minZoom": 13,
       "maxZoom": 16
     },
     "gd_village": {
       "type": "vector",
-      "tiles": ["http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/postgis:gd_village@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
+      "tiles": ["/geoserver/gwc/service/tms/1.0.0/postgis:gd_village@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
       "minZoom": 16,
+      "maxZoom": 20
+    },
+    "gd_place_name": {
+      "type": "vector",
+      "tiles": ["/geoserver/gwc/service/tms/1.0.0/postgis:gd_place_name@EPSG:900913@pbf/{z}/{x}/{-y}.pbf"],
+      "minZoom": 14,
       "maxZoom": 20
     }
   },
   "layers": [
+    {
+      "id": "backgroundcolor",
+      "type": "background",
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "background-opacity": 1.0,
+        "background-color": "#aaaaaa"
+      }
+    },
     {
       "id": "gd_city_simp",
       "source": "gd_city_simp",
@@ -42,6 +65,23 @@
         "fill-color": "#756bb1",
         "fill-outline-color":"#8b8b8b",
         "fill-opacity": 1.0
+      }
+    },
+    {
+      "id": "gd_city_label",
+      "source": "gd_city_point",
+      "source-layer": "gd_city_point",
+      "minzoom": 6,
+      "maxzoom": 10,
+      "type": "symbol",
+      "layout": {
+        "text-field": "{name}",
+        "text-font": ["DejaVu Sans"]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#FF0000",
+        "text-halo-width": 1
       }
     },
     {
@@ -84,6 +124,20 @@
         "fill-color": "#f2f0f7",
         "fill-outline-color":"#8b8b8b",
         "fill-opacity": 1.0
+      }
+    },
+    {
+      "id": "gd_place_name",
+      "source": "gd_place_name",
+      "source-layer": "gd_place_name",
+      "minzoom": 14,
+      "maxzoom": 20,
+      "type": "circle",
+      "paint": {
+        "circle-radius": 5,
+        "circle-color": "#FF0000",
+        "circle-stroke-width": 1,
+        "circle-stroke-color": "#000000"
       }
     }
   ]
