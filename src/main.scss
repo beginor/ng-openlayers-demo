@@ -34,6 +34,10 @@ body {
 
         div.card {
             @include full-width-height();
+
+            div.card-block {
+              flex: 1 1 auto;
+            }
         }
     }
 }
