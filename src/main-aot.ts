@@ -5,6 +5,8 @@ import { AppModuleNgFactory } from '../aot/src/app/app.module.ngfactory';
 
 import './main.css';
 
+import '../node_modules/openlayers/dist/ol.css';
+
 enableProdMode();
 
 platformBrowser()
