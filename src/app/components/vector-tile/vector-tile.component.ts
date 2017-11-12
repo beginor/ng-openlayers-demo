@@ -9,7 +9,7 @@ import {
     moduleId: module.id,
     selector: 'vector-tile',
     templateUrl: './vector-tile.component.html',
-    styleUrls: ['./vector-tile.component.css'],
+    styleUrls: ['./vector-tile.component.scss'],
     animations: [
         trigger('state', [
             transition(':enter', [

@@ -9,7 +9,7 @@ import {
     moduleId: module.id,
     selector: 'hello-map',
     templateUrl: './hello-map.component.html',
-    styleUrls: ['./hello-map.component.css'],
+    styleUrls: ['./hello-map.component.scss'],
     animations: [
         trigger('state', [
             transition(':enter', [
