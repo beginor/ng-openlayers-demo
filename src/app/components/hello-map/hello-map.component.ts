@@ -5,6 +5,12 @@ import {
     AfterViewInit, Component, ElementRef, OnInit, ViewChild
 } from '@angular/core';
 
+import Tile from 'ol/layer/tile';
+import Map from 'ol/map';
+import proj from 'ol/proj';
+import OSM from 'ol/source/osm';
+import View from 'ol/view';
+
 @Component({
     moduleId: module.id,
     selector: 'hello-map',
@@ -43,15 +49,15 @@ export class HelloMapComponent implements OnInit, AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-        this.map = new ol.Map({
+        this.map = new Map({
             target: this.mapEl.nativeElement,
             layers: [
-                new ol.layer.Tile({
-                    source: new ol.source.OSM()
+                new Tile({
+                    source: new OSM()
                 })
             ],
-            view: new ol.View({
-                center: ol.proj.fromLonLat([113.351, 23.1856]),
+            view: new View({
+                center: proj.fromLonLat([113.351, 23.1856]),
                 zoom: 7
             })
         });
