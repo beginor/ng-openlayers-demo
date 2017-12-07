@@ -21,12 +21,10 @@
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.css",
         "../node_modules/font-awesome/css/font-awesome.css",
-        "../node_modules/openlayers/dist/ol.css",
+        "../node_modules/ol/ol.css",
         "styles.scss"
       ],
       "scripts": [
-        "../node_modules/openlayers/dist/ol-debug.js",
-        "../node_modules/ol-mapbox-style/dist/olms.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

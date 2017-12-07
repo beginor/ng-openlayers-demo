@@ -5,6 +5,12 @@ import {
     AfterViewInit, Component, ElementRef, OnInit, ViewChild
 } from '@angular/core';
 
+import Map from 'ol/map';
+import proj from 'ol/proj';
+import View from 'ol/view';
+
+import { apply } from 'ol-mapbox-style';
+
 @Component({
     moduleId: module.id,
     selector: 'vector-tile',
@@ -33,7 +39,7 @@ export class VectorTileComponent implements OnInit, AfterViewInit {
     @ViewChild('map') public mapEl: ElementRef;
     public state: any;
 
-    private map: ol.Map;
+    private map: Map;
 
     constructor() {
         //
@@ -46,7 +52,7 @@ export class VectorTileComponent implements OnInit, AfterViewInit {
     public ngAfterViewInit(): void {
         const layer = 'postgis:gd_place_name';
         const epsg = '900913';
-        this.map = new ol.Map({
+        this.map = new Map({
             target: this.mapEl.nativeElement,
             layers: [
                 // new ol.layer.Tile({
@@ -81,11 +87,11 @@ export class VectorTileComponent implements OnInit, AfterViewInit {
                 //     renderOrder: (f1, f2) => 1
                 // })
             ],
-            view: new ol.View({
-                center: ol.proj.fromLonLat([113.351, 23.1856]),
+            view: new View({
+                center: proj.fromLonLat([113.351, 23.1856]),
                 zoom: 7
             })
         });
-        olms.apply(this.map, 'assets/vector-tile.json');
+        apply(this.map, 'assets/vector-tile.json');
     }
 }
