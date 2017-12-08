@@ -2,6 +2,7 @@ import { Route, RouterModule } from '@angular/router';
 
 import { HelloMapComponent } from './components/hello-map/hello-map.component';
 import { HomeComponent } from './components/home/home.component';
+import { MapboxComponent } from './components/mapbox/mapbox.component';
 import {
     VectorTileComponent
 } from './components/vector-tile/vector-tile.component';
@@ -11,7 +12,8 @@ export const RouteComponents = [
     HomeComponent,
     HelloMapComponent,
     VectorTileComponent,
-    WaterComponent
+    WaterComponent,
+    MapboxComponent
 ];
 
 export const RouteList: RouteWithText[] = [
@@ -23,7 +25,8 @@ export const RouteList: RouteWithText[] = [
         component: VectorTileComponent,
         text: 'Vector Tile'
     },
-    { path: 'water', component: WaterComponent, text: 'Water'}
+    { path: 'water', component: WaterComponent, text: 'Water' },
+    { path: 'mapbox', component: MapboxComponent, text: 'Mapbox' }
 ];
 
 export const AppRoutes = RouterModule.forRoot(
