@@ -59,10 +59,10 @@ export class WaterComponent implements OnInit, AfterViewInit {
                         const f = feature;
                         return new Style({
                             fill: new Fill({
-                                color: '#238b45'
+                                color: 'rgba(0, 255, 0, 0.7)'
                             }),
                             stroke: new Stroke({
-                                color: '#000000',
+                                color: '#b6b6b6',
                                 width: 1
                             })
                         });
