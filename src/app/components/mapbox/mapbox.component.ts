@@ -52,7 +52,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
         apply(
             this.map,
             // tslint:disable-next-line:max-line-length
-            'https://api.mapbox.com/styles/v1/mapbox/bright-v9?access_token=' + key
+            'https://api.mapbox.com/styles/v1/mapbox/streets-v10?access_token=' + key
         );
     }
 
