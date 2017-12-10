@@ -9,17 +9,13 @@ import {
 } from './components/vector-tile/vector-tile.component';
 import { WaterComponent } from './components/water/water.component';
 
-const routes: RouteWithText[] = [
-    { path: '', redirectTo: '/home', pathMatch: 'full', text: '' },
-    { path: 'home', component: HomeComponent, text: '' },
-    { path: 'hello-map', component: HelloMapComponent, text: 'Hello, map' },
-    {
-        path: 'vector-tile',
-        component: VectorTileComponent,
-        text: 'Vector Tile'
-    },
-    { path: 'water', component: WaterComponent, text: 'Water' },
-    { path: 'mapbox', component: MapboxComponent, text: 'Mapbox' }
+const routes: Routes = [
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'hello-map', component: HelloMapComponent },
+    { path: 'vector-tile', component: VectorTileComponent },
+    { path: 'water', component: WaterComponent },
+    { path: 'mapbox', component: MapboxComponent }
 ];
 
 @NgModule({
@@ -32,7 +28,3 @@ const routes: RouteWithText[] = [
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-interface RouteWithText extends Route {
-    text: string;
-}

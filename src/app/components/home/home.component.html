@@ -2,8 +2,20 @@
   <div class="card-header">Openlayers Demos</div>
   <div class="list-group list-group-flush">
     <a class="list-group-item list-group-item-action"
-      *ngFor="let r of routes" [routerLink]="'/' + r.path">
-      {{r.text}}
+      routerLink="/hello-map">
+      Hello map!
+    </a>
+    <a class="list-group-item list-group-item-action"
+      routerLink="/vector-tile">
+      Area Vector Tile
+    </a>
+    <a class="list-group-item list-group-item-action"
+      routerLink="/water">
+      Water Vector Tile
+    </a>
+    <a class="list-group-item list-group-item-action"
+      routerLink="/mapbox">
+      Mapbox Style
     </a>
   </div>
 </div>

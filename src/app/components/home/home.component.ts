@@ -3,8 +3,6 @@ import {
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
-import { RouteList } from '../../app.routes';
-
 @Component({
     moduleId: module.id,
     selector: 'home',
@@ -30,10 +28,8 @@ import { RouteList } from '../../app.routes';
 export class HomeComponent implements OnInit {
 
     public state: any;
-    public routes: any[];
 
     public ngOnInit() {
-        this.routes = RouteList.filter(r => !!r.text);
     }
 
 }
